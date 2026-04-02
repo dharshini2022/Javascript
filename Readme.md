@@ -11,3 +11,17 @@
 **TECH STACK:**
 * Dynamic display based on user interaction
 * Input captured from HTML elements, using Javascript
+
+**TASK 3:**
+**Assignment:** Image Gallery LightBox
+**TECH STACK:**
+* modal popup with js logic
+* modal toggle is added
+* event listener used to deted thumbnail when clicked
+
+**TASK 4:**
+**Assignment:** Weather App with API Integration
+**TECH STACK:**
+* Used Open Metro External API to get weather details
+* pasrsed JSON response and updated the DOM
+* Implemented error handling and network failures using try - catch and response status.

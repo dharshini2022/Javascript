@@ -1,0 +1,73 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    font-family: monospace;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-image: url(https://openweathermap.org//payload/api/media/file/pexels-brett-sayles-1431822_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+.searchDiv{
+    width: 80%;
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.cityInput{
+    width:70%;
+    padding: 1% 0%;
+    border:2px solid #fff;
+    border-radius: 10px 0 0 10px;
+    background-color: transparent;
+}
+
+.submitBtn{
+    width: 10%;
+    padding: 1% 0%;
+    border: 2px solid #fff;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.cityInput:focus{
+    background-color: rgb(147, 216, 239);
+}
+
+.submitBtn:hover{
+    transform: translateY(-2px);
+}
+
+.resultDiv{
+    margin-top: 20px;
+    padding: 20px;
+    width: 400px;
+
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
