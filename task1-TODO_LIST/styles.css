@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightgray;
+}
+
+.inputDiv{
+    display: flex;
+    flex-direction: row;
+    gap:0px;
+}
+
+#addTaskInput{
+    width: 70vw;
+    padding: 1%;
+    border-radius: 10px 0px 0px 10px;
+    border:1px solid #000;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+#addTaskInput:focus{
+    background-color: #fff;
+}
+
+#addTaskBtn{
+    padding: 1%;
+    width: 10vw;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+#addTaskBtn:hover{
+    cursor: pointer;
+    transform: translatex(-1px);
+    opacity: 0.5;
+}
+
+#todoList{
+    padding: 2%;
+    list-style: none;
+}
+
+#todoList li{
+    width: 80vw;
+    padding: 1%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#todoList li:hover{
+    opacity: 0.5;
+    transform: translateY(-5px);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  background-color: #000;
+}
+
+.deleteBtn{
+    background-color: red;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.deleteBtn:hover{
+    cursor: pointer;
+}
