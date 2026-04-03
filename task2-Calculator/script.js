@@ -1,58 +1,35 @@
-const input = document.getElementById("addTaskInput");
-const addBtn = document.getElementById("addTaskBtn");
-const todoList = document.getElementById("todoList");
+const display = document.querySelector(".displayDiv");
+const numbers = document.querySelectorAll(".number");
+const operators = document.querySelectorAll(".operator");
+const clear = document.getElementById("AC");
+const equalTo = document.getElementById("equalTo");
 
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let currentDisplay = "";
 
-function displayTasks() {   //called whenever the UI is updated
-    todoList.innerHTML = "";
+numbers.forEach(button => {
+    button.addEventListener("click", () => handleClick(button));
+});
 
-    tasks.forEach((task,index) => {
-        const list = document.createElement("li");
-        list.textContent = task.text;
+operators.forEach(button => {
+    button.addEventListener("click", () => handleClick(button));
+});
 
-        if(task.completed){
-            list.classList.add("completed");
-        }
-
-        list.addEventListener("click", () => {
-            tasks[index].completed = !tasks[index].completed;
-            savetoLocalStorage();
-            displayTasks();
-        });
-
-
-        const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "X";
-        deleteBtn.classList.add("deleteBtn")
-
-        deleteBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            tasks.splice(index,1);
-            savetoLocalStorage();
-            displayTasks();
-        });
-
-        list.appendChild(deleteBtn);
-        todoList.appendChild(list);
-    });
+function handleClick(button){
+    currentDisplay += button.innerText;
+    display.innerText = currentDisplay;
 }
 
-addBtn.addEventListener("click", (e) => {
-        const text = input.value;
+equalTo.addEventListener("click", () => {
+    try{
+        currentDisplay = eval(currentDisplay).toString();
+        display.innerText = currentDisplay
+    }catch{
+        display.innerText = "Error";
+        currentDisplay = "";
+    }
+});
 
-        if(text === "") return;
-
-        tasks.push({text,completed: false});
-        input.value = "";
-
-        savetoLocalStorage();
-        displayTasks();
-})
-
-
-function savetoLocalStorage(){
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-}
-
-displayTasks();
+clear.addEventListener("click",() => {
+    currentDisplay = "";
+    display.innerText="";
+});
