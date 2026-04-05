@@ -29,3 +29,14 @@
 **TASK 5:**
 **Assignment:** Dynamic Quiz Application
 **TECH STACK:**
+* Dynamic question loading from an external JSON
+* Event listeners used to capture user selection (onClick on option buttons)
+* End of quiz identification logic with respect to JSON content
+* Score calculation login implemented
+
+**TASK 6:**
+**Assignment:** Drag and Drop List Reordering
+**TECH STACK**:
+* Used Drag and Drop API
+* Used event listeners to identify dragable element and drop area
+* Updated DOM elements with new order with insertBefore logic

@@ -1,0 +1,39 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    border: 1px solid #000;
+    border-radius: 5%;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 200px;
+}
+
+li {
+    padding: 20px;
+    margin: 10px;
+    background: #eee;
+    cursor: grab;
+    border: 1px solid #ccc;
+}
