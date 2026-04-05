@@ -40,3 +40,11 @@
 * Used Drag and Drop API
 * Used event listeners to identify dragable element and drop area
 * Updated DOM elements with new order with insertBefore logic
+
+**TASK 7:**
+**Assignment:** Real-time Chat Simulation
+**TECH STACK:**
+* generated dynamic replies with array of replies and random module.
+* Used SetTimeOut to create delay before bot reply.
+* Timestamp displayed with Date().
+* Enter key based send used with "keypress" event listener.
