@@ -26,8 +26,7 @@ function displayTasks() {   //called whenever the UI is updated
         deleteBtn.textContent = "X";
         deleteBtn.classList.add("deleteBtn")
 
-        deleteBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
+        deleteBtn.addEventListener("click", () => {
             tasks.splice(index,1);
             savetoLocalStorage();
             displayTasks();

@@ -33,6 +33,7 @@ btn.addEventListener("click", async () => {
         }
 
         const data = await response.json();
+        console.log(data);
         const temp = data.main.temp;
         const humidity = data.main.humidity;
         const weather = data.weather[0].description;
