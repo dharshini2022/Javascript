@@ -54,3 +54,9 @@
 **TECH STACK:**
 * hash based routing with respect to window.onhashchange
 * dynamic content loading with respect to hash and conditional logic
+
+**TASK 9:**
+**Assignment:** Infinite Scrolling Content Loader
+**TECH STACK:**
+* asynchronously loaded data with Fetch API
+* automatic new data loaded when the user scrolled to bottom of the page with respect to "scroll" eventListner and scrollHeight properties.
