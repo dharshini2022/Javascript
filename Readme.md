@@ -48,3 +48,9 @@
 * Used SetTimeOut to create delay before bot reply.
 * Timestamp displayed with Date().
 * Enter key based send used with "keypress" event listener.
+
+**TASK 8:**
+**Assignment:** Single Page Application with Hash based Routing
+**TECH STACK:**
+* hash based routing with respect to window.onhashchange
+* dynamic content loading with respect to hash and conditional logic
