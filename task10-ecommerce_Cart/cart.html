@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header class="simpleHeader">
+    
+    <div class="navLinks">
+        <a href="home.html">Home</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <input type="text" id="searchBar" placeholder="Search products..." />
+
+    <select id="Shop">
+        <option value="all">All</option>
+        <option value="Mobile_Laptops">Electronics</option>
+        <option value="Dress">Dress</option>
+        <option value="Footwear">Footwear</option>
+        <option value="Books">Books</option>
+        <option value="Toys">Toys</option>
+    </select>
+
+    </header>
+    <div class="cartContent">
+        <h2> Cart Items </h2>
+        <table class="cartTable">
+        <thead>
+            <th> Product Code</th>
+            <th> Item Name </th>
+            <th> Quantity </th>
+        </thead>
+        <tbody id="cartBody"></tbody>
+        </table>
+
+        <p id="Tax"></p>
+        <p id="Total"></p>
+    </div>
+    
+    <div class="DSDiv">
+        <h2>Frequently Asked Questions (FAQs) : </h2>
+        <details>
+            <summary>Q : How long does delivery take?</summary>
+            <p>A: Orders are typically delivered within 3–5 business days depending on your location.</p>
+        </details>
+        <details>
+            <summary>Q: Can I return a product after delivery?</summary>
+            <p>A: Yes, products can be returned within 7 days of delivery if they meet our return policy conditions.</p>
+        </details>
+        <details>
+            <summary>Q: What payment methods are accepted?</summary>
+            <p>A: We accept credit/debit cards, UPI, net banking, and cash on delivery (COD).</p>
+        </details>
+        <details>
+            <summary>Q: How can I contact customer support?</summary>
+            <p>A: You can reach us via email or through the support section on our website.</p>
+        </details>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -60,3 +60,10 @@
 **TECH STACK:**
 * asynchronously loaded data with Fetch API
 * automatic new data loaded when the user scrolled to bottom of the page with respect to "scroll" eventListner and scrollHeight properties.
+
+**TASK 10:**
+**Assignment:** Full-Featured e-commerce Shopping cart
+**TECH STACK:**
+* Dynamic Product Listing from JSON using forEach loops
+* Implemented add-to-cart functionality with qty reduce and increase buttons.
+* Product filtering and search based on keywords and category with respect to filter.

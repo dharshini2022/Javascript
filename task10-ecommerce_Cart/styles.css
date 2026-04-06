@@ -1,0 +1,260 @@
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;  /*to wrap content + padding + border within the total width*/
+    }
+
+    .simpleHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #131921;
+        padding: 10px 20px;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navLinks a {
+        color: white;
+        margin-right: 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navLinks a:hover {
+        text-decoration: underline;
+    }
+
+    #searchBar {
+        width: 40%;
+        padding: 6px;
+    }
+
+    #Shop {
+        padding: 6px;
+    }
+
+    /* common element css */
+    p{
+        font-size: 16px;
+        color: #ffffff;
+        padding-bottom: 0;
+    }
+
+    span{
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    select{
+        background-color: transparent;
+        color: #ffffff;
+        border:none;
+        text-align: justify;
+
+    }
+
+    select optgroup{
+        color: #000000;
+    }
+
+    select:hover{
+        cursor: pointer;
+    }
+
+    option{
+        color:#000000;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    /*sidebar css*/
+    .sidebar{
+        background-color: #131921;
+        width:300px;
+        height: 300px;
+        position: fixed;
+        top:50px;
+        right: 0;
+        transform: translateX(100%);
+        text-align: left;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    /*main section css*/
+    main{
+        margin-top: 55px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items:center;
+        flex:1;
+    }
+
+    .ProductCard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 270px;
+        height: auto;
+        border: 3px solid black;
+        margin-bottom: 2%;
+    }
+    .ProductCard img{
+        width: 100%;
+        height: 55%;
+    }
+
+    .ProductCard p{
+        font-size: 14px;
+        color: #000000;
+        text-align:justify;
+        margin: 10px 10px;
+    }
+
+    .ProductCard a{
+        padding: 10px 20px;
+        background-color: #000000;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size:16px;
+        padding : 12px 40px;
+        text-decoration: none;
+    }
+
+    .ProductCard a:hover{
+        background-color: #07060677;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+
+    /*mobile responsive view (mobile first approach)*/
+    .iconDiv{
+        display: none;
+    }
+
+    .locationDiv{
+        display:none;
+    }
+
+    /*Footer css*/
+    footer{
+        height: 7vh;
+        background-color: #131921;
+        text-align: center;
+        padding-top: 3px;
+    }
+
+
+    .cartContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+    .cartTable{
+        width:80%;
+        height:auto;
+        border-collapse: collapse;
+    }
+
+    .cartTable th{
+        background-color: grey;
+        color: white;
+        padding: 2%;
+        border: 1px solid #000;
+    }
+
+
+    .cartTable td{
+        padding: 2%;
+        border: 1px solid #000;
+    }
+
+    #Tax, #Total{
+        font-size: 20px;
+        color: #000;
+    }
+
+    /* CSS for Accordian created using details and summary tag */
+    .DSDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    }
+    details{
+    width: 70%;
+    border:1px solid #d4d4d4;
+    }
+
+    details[open] summary{
+    background-color: #333;
+    color: #fff;
+    font-weight: 100;
+    }
+
+    summary{
+    background-color: #e6e6e6;
+    padding: 1% 0%;
+    font-size: 16px;
+    font-weight: bold;
+    }
+
+
+    /*tablet view css*/
+    @media (min-width:431px) and (max-width:1024px) {
+        .locationDiv{
+            display: flex;
+        }
+        .searchBarDiv{
+            padding-left: 30px;
+        }
+        .logoDiv>img{
+            width: 100px;
+        }
+
+        .popup{
+            top:20%;
+            left:45%;
+            transform: translate(-20%,-45%);
+        }
+        
+
+    }
+
+    /*lap view css*/
+    @media (min-width:1025px) {
+        .hamburgerBtn{
+            display: none;
+        }
+        .sidebar{
+            display: none;
+        }
+        .iconDiv{
+            display: flex;
+        }
+        .locationDiv{
+            display: flex;
+        }
+    }
