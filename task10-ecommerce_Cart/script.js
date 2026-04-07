@@ -23,15 +23,21 @@ if(container){
 }
 
 function renderProducts(list){
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
     container.innerHTML = "";
     list.forEach(product => {
+        const isInCart = cart.some(item => item.id === product.id); 
         const div = document.createElement("div");
         div.classList.add("ProductCard");
         div.innerHTML = `
         <img src="${product.image}" />
         <h2>${product.name}</h2>
         <p>₹${product.price}</p>
-        <button onclick="addToCart('${product.id}')">Add to Cart</button>`;
+        ${isInCart ?
+            `<button disabled>Added to Cart</button>` :
+            `<button onclick="addToCart('${product.id}')">Add to Cart</button>`
+        }`
+        
         container.appendChild(div);
     });
 }
@@ -66,6 +72,7 @@ window.addToCart = function(id){
     }
 
     localStorage.setItem("cart",JSON.stringify(cart));
+    applyFilter();
     alert("Item Added to Cart");
 }
 

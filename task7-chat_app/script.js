@@ -1,6 +1,7 @@
 const chatBox = document.querySelector(".chatBox");
 const input = document.querySelector(".inputMsg");
 const sendBtn = document.querySelector(".sendBtn");
+const loading = document.querySelector(".Loading");
 
 function getTime(){
     return new Date().toLocaleTimeString([],{
@@ -28,9 +29,13 @@ function botReply(userText){
 
     const randomReply = replies[Math.floor(Math.random() * replies.length)];
 
+    loading.style.display = "block";
+    chatBox.appendChild(loading);
+    chatBox.scrollTop = chatBox.scrollHeight;
     setTimeout(() => {
+        loading.style.display = "none";
         addMsg(randomReply,"bot")
-    },2000);
+    },1000);
 }
 
 function sendMessage(){

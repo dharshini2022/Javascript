@@ -67,3 +67,8 @@
 * Dynamic Product Listing from JSON using forEach loops
 * Implemented add-to-cart functionality with qty reduce and increase buttons.
 * Product filtering and search based on keywords and category with respect to filter.
+
+**Additional Tasks:**
+1) Added Loading State in Chat Application (Task 7).
+2) Created Transition and Animation based routing. (Task 8).
+3) Conditional Rendering (Task 10).

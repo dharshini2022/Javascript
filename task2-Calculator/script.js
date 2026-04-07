@@ -15,13 +15,13 @@ operators.forEach(button => {
 });
 
 function handleClick(button){
-    currentDisplay += button.innerText;
+    currentDisplay += button.innerText; 
     display.innerText = currentDisplay;
 }
 
 equalTo.addEventListener("click", () => {
     try{
-        currentDisplay = eval(currentDisplay).toString();
+        currentDisplay = eval(currentDisplay).toString(); 
         display.innerText = currentDisplay
     }catch{
         display.innerText = "Error";
